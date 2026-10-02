@@ -9,7 +9,7 @@
 
 | Campo | Valor |
 |---|---|
-| Turma | <!-- PREENCHER: ex. 12DTAT --> |
+| Turma | 2DTATBB |
 | Grupo | Grupo 21 |
 | Data de entrega | 10/10/2026 |
 
@@ -17,7 +17,7 @@
 
 | Nome completo | RM | E-mail |
 |---|---|---|
-| <!-- PREENCHER --> | RM000000 | |
+| Andressa Ayumi Adati Kogati | RM377737 | ayumikogati@gmail.com |
 | | | |
 | | | |
 | | | |
