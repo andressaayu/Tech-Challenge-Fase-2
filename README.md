@@ -18,9 +18,9 @@
 | Nome completo | RM | E-mail |
 |---|---|---|
 | Andressa Ayumi Adati Kogati | RM377737 | ayumikogati@gmail.com |
-| | | |
-| | | |
-| | | |
+| Janice Angélica Lorenço | | |
+| Luiz Gustavo Tavares da Costa  | RM377791 | pr.luizgustavo@gmail.com |
+| Tatiane Bispo Ribeiro  | RM377738 | ribeiro.tati@yahoo.com.br |
 | | | |
 
 ---
