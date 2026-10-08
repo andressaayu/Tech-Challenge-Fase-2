@@ -28,7 +28,7 @@ Estes três links são **obrigatórios** e devem ser idênticos aos do PDF de su
 
 | Item | Link |
 |---|---|
-| Repositório | <!-- PREENCHER: URL pública do GitHub --> |
+| Repositório | https://github.com/andressaayu/Tech-Challenge-Fase-2/tree/main |
 | Vídeo executivo (≤ 5 min) | <!-- PREENCHER: YouTube não listado / Drive com acesso liberado --> |
 | Apresentação | https://drive.google.com/file/d/1Cgpa8oUL2ZG2CUsSp5LNz6LaIFUriFkC/view?usp=sharing |
 
