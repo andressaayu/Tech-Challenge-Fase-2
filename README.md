@@ -1,8 +1,5 @@
 # Tech Challenge — Fase 2 | POSTECH Data Analytics
 
-> **INSTRUÇÕES:** este README é um template. Substitua **todos** os blocos marcados com
-> `<!-- PREENCHER -->` e apague as linhas de instrução antes de submeter.
-
 ---
 
 ## 1. Identificação
@@ -34,9 +31,6 @@ Estes três links são **obrigatórios** e devem ser idênticos aos do PDF de su
 | Repositório | <!-- PREENCHER: URL pública do GitHub --> |
 | Vídeo executivo (≤ 5 min) | <!-- PREENCHER: YouTube não listado / Drive com acesso liberado --> |
 | Apresentação | https://drive.google.com/file/d/1Cgpa8oUL2ZG2CUsSp5LNz6LaIFUriFkC/view?usp=sharing |
-
-> ⚠️ Repositório privado ou inacessível inviabiliza a avaliação da entrega.
-> Confira o acesso em uma janela anônima antes de enviar.
 
 ---
 
