@@ -107,24 +107,17 @@ python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
 pip install -r requirements.txt
-jupyter notebook
 ```
 
-Baixe o dataset e coloque o arquivo bruto em `data/raw/` (os dados **não** são versionados —
-veja `data/README.md`).
+**1. Baixe a base de dados** na fonte: https://drive.google.com/drive/folders/1rKpbaYI4vOweYaG-TXpGKEmM400uuGzw. Extraia os arquivos `application_record.csv` e `credit_record.csv` e coloque-os na **mesma pasta do notebook** (os dados **não** são versionados neste repositório).
 
-Depois execute os notebooks nesta ordem:
+**2. Execute o notebook** `Tech_Challenge_2.ipynb`:
 
-| # | Notebook | O que faz |
-|---|---|---|
-| 1 | `notebooks/01_eda.ipynb` | Análise exploratória |
-| 2 | `notebooks/02_preprocessamento.ipynb` | Limpeza, escala e feature engineering |
-| 3 | `notebooks/03_modelagem.ipynb` | Treino e comparação dos modelos |
-| 4 | `notebooks/04_avaliacao.ipynb` | Métricas, importância de variáveis e conclusões |
+[Abrir o notebook](Tech_Challenge_2.ipynb)
 
-**Semente fixa:** `RANDOM_STATE = 42`, declarada na primeira célula de cada notebook.
-Rodar os notebooks na ordem acima, a partir de um ambiente limpo, deve reproduzir
-exatamente os números da seção 5.
+Rode todas as células em ordem (**Run All**). O notebook cobre as quatro etapas do projeto: análise exploratória, limpeza e feature engineering, treino e comparação dos modelos, e métricas com conclusões.
+
+**Semente fixa:** `RANDOM_STATE = 42`, declarada na primeira célula do notebook. Rodar o notebook do início ao fim, a partir de um ambiente limpo, deve reproduzir exatamente os números da seção 5.
 
 ---
 
