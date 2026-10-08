@@ -64,9 +64,36 @@ A escolha da janela de 12 meses busca representar o comportamento de crédito ma
 
 Descrição das variáveis:
 
-| Variável | Tipo | Descrição |
+**application_record.csv** (cadastro do solicitante)
+
+| Variável | Tipo | Descrição | 
 |---|---|---|
-| | | |
+| ID | Identificador (inteiro) | Número do cliente | 
+| CODE_GENDER | Categórica binária (M/F) | Gênero | 
+| FLAG_OWN_CAR | Categórica binária (Y/N) | Tem carro | 
+| FLAG_OWN_REALTY | Categórica binária (Y/N) | Existe alguma propriedade | 
+| CNT_CHILDREN | Numérica discreta | Número de filhos | 
+| AMT_INCOME_TOTAL | Numérica contínua | Renda anual | 
+| NAME_INCOME_TYPE | Categórica nominal | Categoria de renda | 
+| NAME_EDUCATION_TYPE | Categórica ordinal | Nível educacional | 
+| NAME_FAMILY_STATUS | Categórica nominal | Estado civil | 
+| NAME_HOUSING_TYPE | Categórica nominal | Modo de vida | 
+| DAYS_BIRTH | Numérica discreta (dias) | Aniversário (Contagem regressiva a partir do dia atual (0); -1 significa ontem.) |
+| DAYS_EMPLOYED | Numérica discreta (dias) | Data de início do emprego (Contagem regressiva a partir do dia atual (0). Se positivo, a pessoa está atualmente desempregada.) |
+| FLAG_MOBIL | Binária (0/1) | Existe celular |
+| FLAG_WORK_PHONE | Binária (0/1) | Existe telefone de trabalho | 
+| FLAG_PHONE | Binária (0/1) | Tem telefone | 
+| FLAG_EMAIL | Binária (0/1) | Existe algum e-mail | 
+| OCCUPATION_TYPE | Categórica nominal | Ocupação | 
+| CNT_FAM_MEMBERS | Numérica discreta | Tamanho da família | 
+
+**credit_record.csv** (histórico mensal de crédito)
+
+| Variável | Tipo | Descrição | 
+|---|---|---|
+| ID | Identificador (inteiro) | Número do cliente | |
+| MONTHS_BALANCE | Numérica discreta (meses) | Mês do registro (O mês de extração dos dados é o ponto de partida, contando para trás: 0 é o mês atual, -1 é o mês anterior, e assim por diante) |
+| STATUS | Categórica ordinal | Status (0: 1-29 dias de atraso; 1: 30-59 dias; 2: 60-89 dias; 3: 90-119 dias; 4: 120-149 dias; 5: dívidas atrasadas ou incobráveis, perdas por mais de 150 dias; C: quitadas naquele mês; X: sem empréstimo no mês.)|
 
 ---
 
@@ -103,15 +130,22 @@ exatamente os números da seção 5.
 
 ## 5. Resultados
 
-| Modelo | Acurácia | Precisão | Recall | F1 | AUC-ROC |
-|---|---|---|---|---|---|
-| <!-- PREENCHER --> | | | | | |
-| | | | | | |
+| Modelo | Acurácia | Precisão | Recall | F1 | ROC AUC | PR AUC |
+|---|---|---|---|---|---|---|
+| KNN (A-padrão) | 0.9865 | 0.0000 | 0.0000 | 0.0000 | 0.4973 | 0.0153 |
+| Logit (A-padrão) | 0.9865 | 0.0000 | 0.0000 | 0.0000 | 0.5634 | 0.0200 |
+| Árvore de Decisão (A-padrão) | 0.9680 | 0.0341 | 0.0500 | 0.0405 | 0.5380 | 0.0163 |
+| Random Forest (A-padrão) | 0.9851 | 0.1250 | 0.0167 | 0.0294 | 0.5691 | 0.0355 |
+| SVM (A-padrão) | 0.9865 | 0.0000 | 0.0000 | 0.0000 | 0.4846 | 0.0175 |
+| KNN (B-balanceada) | 0.5214 | 0.0164 | 0.5833 | 0.0319 | 0.5391 | 0.0150 |
+| Logit (B-balanceada) | 0.5387 | 0.0151 | 0.5167 | 0.0294 | 0.5624 | 0.0206 |
+| Árvore de Decisão (B-balanceada) | 0.6720 | 0.0159 | 0.3833 | 0.0306 | 0.5167 | 0.0160 |
+| Random Forest (B-balanceada) | 0.9397 | 0.0273 | 0.1000 | 0.0429 | 0.5616 | 0.0181 |
+| SVM (B-balanceada) | 0.7008 | 0.0115 | 0.2500 | 0.0221 | 0.4351 | 0.0118 |
 
-**Modelo escolhido:** <!-- PREENCHER --> — <!-- PREENCHER: por quê. -->
+**Modelo escolhido:** Regressão Logística Balanceada (`class_weight='balanced'`) — foi escolhida pela interpretabilidade e pela robustez, e não por ter o maior desempenho isolado. Os coeficientes e odds ratios são coerentes com o negócio (por exemplo, mais tempo de emprego reduz o risco) e podem ser explicados a áreas de risco e de compliance, o que é essencial em decisão de crédito. Ela teve a melhor PR AUC e AUC média de 0,585, estatisticamente equivalente aos demais modelos, já que as diferenças ficam dentro da margem de erro (IC 95% de 0,42 a 0,64). Como nenhum modelo mais complexo trouxe ganho claro, não há motivo para abrir mão da transparência. O balanceamento também evita o problema dos modelos padrão, que chegam a 98% de acurácia apenas por classificar todos como bons pagadores (recall zero para maus pagadores).
 
-**Métricas priorizadas:** <!-- PREENCHER: justifique a escolha considerando o
-     desbalanceamento de classes e o custo de cada tipo de erro no contexto do negócio. -->
+**Métricas priorizadas:** ROC AUC e PR AUC, com recall da classe "mau pagador" e Lift nos decis de maior risco como apoio.
 
 ---
 
