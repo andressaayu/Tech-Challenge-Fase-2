@@ -170,13 +170,12 @@ Próximos passos
 
 ```
 .
-├── data/          dados brutos (raw) e tratados (processed) — não versionados
-├── notebooks/     análise em ordem numerada
-└── docs/          apresentação executiva
+├── README.md                 documentação do projeto
+├── Tech_Challenge_2.ipynb    notebook completo (EDA, pré-processamento, modelagem e avaliação)
+└── Apresentacao.pdf          apresentação executiva
 ```
 
-Detalhes e convenções em [`ESTRUTURA.md`](ESTRUTURA.md).
-Antes de enviar, percorra o [`CHECKLIST.md`](CHECKLIST.md).
+Os arquivos `application_record.csv` e `credit_record.csv` **não são versionados**: baixe-os na fonte (seção 4) e coloque-os na mesma pasta do notebook.
 
 ---
 
