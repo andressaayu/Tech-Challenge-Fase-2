@@ -33,7 +33,7 @@ Estes três links são **obrigatórios** e devem ser idênticos aos do PDF de su
 |---|---|
 | Repositório | <!-- PREENCHER: URL pública do GitHub --> |
 | Vídeo executivo (≤ 5 min) | <!-- PREENCHER: YouTube não listado / Drive com acesso liberado --> |
-| Apresentação | <!-- PREENCHER: link do arquivo em `docs/` ou Drive --> |
+| Apresentação | https://drive.google.com/file/d/1Cgpa8oUL2ZG2CUsSp5LNz6LaIFUriFkC/view?usp=sharing |
 
 > ⚠️ Repositório privado ou inacessível inviabiliza a avaliação da entrega.
 > Confira o acesso em uma janela anônima antes de enviar.
@@ -42,7 +42,7 @@ Estes três links são **obrigatórios** e devem ser idênticos aos do PDF de su
 
 ## 3. O problema
 
-<!-- PREENCHER: contexto de negócio e a motivação para o uso de Machine Learning. -->
+<!-- A concessão de crédito é uma atividade relevante para as instituições financeiras, mas envolve riscos associados à inadimplência. Nesse contexto, a análise dos solicitantes deve buscar identificar perfis com maior ou menor probabilidade de apresentar dificuldades no pagamento, equilibrando a redução do risco de perdas com a oportunidade de conceder crédito a clientes com bom comportamento financeiro. O grande volume de solicitações e a diversidade de informações disponíveis tornam o uso de técnicas de análise de dados uma oportunidade para tornar esse processo mais eficiente. O Machine Learning permite explorar padrões presentes nos dados históricos e utilizá-los para classificar novos solicitantes entre perfis de bons e maus pagadores, apoiando o processo de avaliação de crédito. -->
 
 ### Variável alvo
 
