@@ -29,7 +29,7 @@ Estes três links são **obrigatórios** e devem ser idênticos aos do PDF de su
 | Item | Link |
 |---|---|
 | Repositório | https://github.com/andressaayu/Tech-Challenge-Fase-2/tree/main |
-| Vídeo executivo (≤ 5 min) | https://drive.google.com/file/d/1_j85fh_oar0EjNNaLy_c8yBnCsaDuT5/view?usp=sharing |
+| Vídeo executivo (≤ 5 min) | https://drive.google.com/file/d/1_j85fh-_oar0EjNNaLy_c8yBnCsaDuT5/view?usp=sharing |
 | Apresentação | https://drive.google.com/file/d/1Cgpa8oUL2ZG2CUsSp5LNz6LaIFUriFkC/view?usp=sharing |
 
 ---
